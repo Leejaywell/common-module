@@ -1,0 +1,5 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+pers.lee.common.rpc.server.autoconfigure.HibernateConfiguration,\
+pers.lee.common.rpc.server.autoconfigure.MongoConfiguration,\
+pers.lee.common.rpc.server.autoconfigure.CommonRpcConfiguration

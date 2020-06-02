@@ -1,0 +1,23 @@
+archivesBaseName = "common-config"
+
+dependencies {
+    compile project(':lang')
+    compile(
+            "org.slf4j:slf4j-api",
+            "org.apache.commons:commons-lang3"
+    )
+    compile("com.google.guava:guava") {
+        exclude group: 'com.google.code.findbugs'
+        exclude group: 'org.checkerframework'
+        exclude group: 'com.google.errorprone'
+        exclude group: 'com.google.j2objc'
+        exclude group: 'org.codehaus.mojo'
+    }
+    compileOnly(
+            "org.springframework:spring-context",
+            "org.springframework:spring-web",
+            "org.springframework.boot:spring-boot-starter-actuator",
+            "org.springframework.boot:spring-boot-starter-security",
+            "javax.servlet:javax.servlet-api"
+    )
+}

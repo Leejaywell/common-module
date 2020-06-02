@@ -1,0 +1,18 @@
+archivesBaseName = "common-module-lang"
+
+dependencies {
+    compileOnly(
+            "javax.servlet:javax.servlet-api",
+            "org.springframework:spring-context",
+            "org.springframework.boot:spring-boot-autoconfigure"
+    )
+    compile(
+            "org.apache.commons:commons-lang3",
+            "commons-io:commons-io",
+            "com.google.code.gson:gson",
+            "joda-time:joda-time",
+            "org.slf4j:slf4j-api",
+            "com.squareup.okhttp3:okhttp",
+            "com.google.guava:guava"
+    )
+}

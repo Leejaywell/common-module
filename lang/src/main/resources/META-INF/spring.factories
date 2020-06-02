@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+pers.lee.common.lang.autoconfigure.CommonWebAutoConfigure

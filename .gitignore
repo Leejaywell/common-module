@@ -1,0 +1,18 @@
+.svn
+*.iml
+.idea
+.sonar
+*out
+*bin
+*.settings
+*target
+*.classpath
+*.project
+tmp
+*build
+
+#ignore gradle
+.gradle/
+gradle/
+gradlew
+gradlew.bat

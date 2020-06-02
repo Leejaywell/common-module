@@ -1,0 +1,92 @@
+plugins {
+    id "io.spring.dependency-management" version "1.0.9.RELEASE"
+    id "org.springframework.boot" version "2.3.0.RELEASE"
+}
+
+subprojects {
+    group = 'pers.lee.common'
+    version = '3.1.4'
+
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'eclipse'
+    apply plugin: 'groovy'
+    apply plugin: "maven-publish"
+    apply plugin: "org.springframework.boot"
+    apply plugin: "io.spring.dependency-management"
+
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    test {
+        exclude '**/integration/**'
+    }
+
+    dependencyManagement {
+        dependencies {
+            dependency 'org.projectlombok:lombok:1.16.20'
+            dependency 'com.google.code.gson:gson:2.8.2'
+            dependency 'javax.servlet:javax.servlet-api:3.1.0'
+
+            dependency 'org.apache.commons:commons-lang3:3.7'
+            dependency 'org.apache.commons:commons-collections4:4.1'
+            dependency 'com.google.guava:guava:24.0-jre'
+            dependency 'commons-io:commons-io:2.6'
+
+            dependency 'org.slf4j:slf4j-api:1.7.25'
+            dependency 'ch.qos.logback:logback-classic:1.2.3'
+            dependency 'ch.qos.logback:logback-core:1.2.3'
+
+            dependency 'com.fasterxml.jackson.datatype:jackson-datatype-joda:2.9.4'
+            dependency 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.9.4'
+            dependency 'org.apache.avro:avro-ipc:1.8.2'
+
+            dependency 'joda-time:joda-time:2.9.9'
+            dependency 'org.quartz-scheduler:quartz:2.3.0'
+
+            dependency group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.3.0.RELEASE'
+            dependency group: 'org.springframework.boot', name: 'spring-boot-starter-aop', version: '2.3.0.RELEASE'
+            dependency group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '2.3.0.RELEASE'
+            dependency group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.3.0.RELEASE'
+            dependency group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.3.0.RELEASE'
+            dependency group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.3.0.RELEASE'
+            dependency group: 'org.springframework.boot', name: 'spring-boot-starter-data-rest', version: '2.3.0.RELEASE'
+            dependency group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.3.0.RELEASE'
+            dependency group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.3.0.RELEASE'
+            dependency group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.3.0.RELEASE'
+            dependency group: 'org.springframework.boot', name: 'spring-boot-autoconfigure', version: '2.3.0.RELEASE'
+            dependency group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.3.0.RELEASE'
+            dependency 'org.springframework:spring-web:5.1.2.RELEASE'
+            dependency 'org.springframework.kafka:spring-kafka:2.2.0.RELEASE'
+
+            dependency 'org.hibernate:hibernate-core:5.3.7.Final'
+
+            dependency 'mysql:mysql-connector-java:6.0.6'
+            dependency 'com.alibaba:druid-spring-boot-starter:1.1.10'
+            dependency 'com.alibaba:druid:1.1.9'
+
+            dependency 'com.squareup.okhttp:okhttp:2.7.5'
+            dependency 'com.squareup.okhttp3:okhttp:3.11.0'
+            dependency 'org.apache.kafka:kafka-clients:0.11.0.2'
+
+            dependency 'org.codehaus.groovy:groovy-all:2.4.13'
+
+            dependency 'org.spockframework:spock-core:1.1-groovy-2.4'
+            dependency 'org.spockframework:spock-spring:1.1-groovy-2.4'
+            dependency 'org.hsqldb:hsqldb:2.4.0'
+            dependency 'junit:junit:4.12'
+
+            dependency 'commons-beanutils:commons-beanutils:1.9.3'
+            dependency 'org.mapdb:mapdb:3.0.7'
+            dependency 'com.github.ben-manes.caffeine:caffeine:2.6.2'
+            dependency 'net.bytebuddy:byte-buddy:1.9.2'
+        }
+    }
+}
+
+
+
